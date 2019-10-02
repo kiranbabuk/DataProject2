@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New York City AirBnB Locations</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1 class="jumbotron">New York City Locations</h1>
+    <div>
+        <section>
+            <h1>Place Host Price Minimum Nights</h1>
+            <ul style="list-style: none;">
+                {% for locale in locales %}
+                    <li>{{ locale.name }}: {{ locale.host_name }}: {{ locale.price }}: {{ locale.minimum_nights }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+  </div>
+</body>
+
+</html>
